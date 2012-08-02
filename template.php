@@ -1,5 +1,19 @@
 <?php
 
+/**
+ * Implements hook_form_ID_alter().
+ */
+function step_by_step_form_search_block_form_alter(&$form, &$form_state) {
+  $form['#attributes']['class'][] = 'form-search';
+  $form['search_block_form']['#attributes']['class'][] = 'search-query';
+  $form['search_block_form']['#attributes']['class'][] = 'input-small';
+  unset($form['actions']);
+  $form['submit'] = array(
+    '#type' => 'submit',
+    '#value' => t('Search'),
+  );
+}
+
 function step_by_step_pager($variables) {
   $tags = $variables['tags'];
   $element = $variables['element'];
