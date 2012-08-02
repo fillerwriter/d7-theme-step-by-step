@@ -1,2 +1,8 @@
 name = Step By Step
 core = 7.x
+
+stylesheets[all][] = css/bootstrap.css
+stylesheets[all][] = css/bootstrap-responsive.css
+stylesheets[all][] = css/step-by-step.css
+
+scripts[] = js/step-by-step.js
